@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DICAS SUSTENTAVEIS</title>
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <div id="titulo">
+            <h2 id="titulo"font-size: "1.5rem"         
+  font-weight: "800">
+            Dicas Sustentaveis 
+            
+
+            </h2>
+           
+        </div>
+        <nav id="menu">
+        <a href="index.html">INICIO</a>|
+        <a href="Receitas.html" class="menu">RECEITAS</a>|
+        <a href="Calculadora.html" class="menu">CALCULADORA </a>|
+        <a href="Reciclaveis.html" class="menu">DESCARTE</a>|
+        <a href="Ideias.html" class="menu"> IDEIAS RECICLAVEIS</a>
+        </nav>
+    </header>
+
+    <main id="main-calculadora">
+        <div class="calculator-card">
+            <h2 id="paginastitulo">CALCULADORA DE IMPACTO</h2>
+            <p class="subtitle">Como suas ações irão impactar o mundo daqui a 10 anos?</p>
+
+            
+            <div class="input-group">
+                <label for="plastico">Uso de sacolas plásticas descartáveis por semana:</label>
+                <div class="range-container">
+                    <input type="range" id="plastico" min="0" max="50" step="1" value="10">
+                    <span class="value-display" id="val-plastico">10 un</span>
+                </div>
+            </div>
+
+            
+            <div class="input-group">
+                <label for="banho">Tempo médio de banho (minutos):</label>
+                <div class="range-container">
+                    <input type="range" id="banho" min="2" max="30" step="1" value="10">
+                    <span class="value-display" id="val-banho">10 min</span>
+                </div>
+            </div>
+
+            
+            <div class="input-group">
+                <label for="reciclagem">Dias por semana que você separa o lixo para reciclagem:</label>
+                <div class="range-container">
+                    <input type="range" id="reciclagem" min="0" max="7" step="1" value="3">
+                    <span class="value-display" id="val-reciclagem">3 dias</span>
+                </div>
+            </div>
+
+            
+            <div class="results">
+                <h3>Projeção do seu impacto em 10 anos:</h3>
+                <div class="result-item">
+                     Sacolas plásticas evitadas/geradas: <span class="highlight" id="res-plastico">0</span> unidades
+                </div>
+                <div class="result-item">
+                     Água consumida no banho: <span class="highlight" id="res-agua">0</span> litros
+                </div>
+                <div class="result-item">
+                     Nível estimado de contribuição verde: <span class="highlight" id="res-sustentabilidade">Intermediário</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer class="rodape-simples">
+  <div class="rodape-conteudo">
+    
+    <div class="rodape-brand">
+      <span class="logo-texto">ECO SABOR</span>
+      <span class="copyright">&copy; <span id="ano-atual"></span> Todos os direitos reservados.</span>
+    </div>
+
+    <nav class="rodape-nav">
+      <a href="javascript:void(0)" onclick="abrirContato()" class="link-contato">Contato</a>
+    </nav>
+
+  </div>
+</footer>
+
+<div id="modal-contato" class="modal-overlay">
+    <script>
+    function abrirContato() {
+      document.getElementById("modal-contato").style.display = "flex";
+    }
+
+    function fecharContato() {
+      document.getElementById("modal-contato").style.display = "none";
+    }</script>
+  <div class="modal-box">
+    <button class="btn-fechar" onclick="fecharContato()">✕</button>
+    <h3>Fale Conosco</h3>
+    <p>Envie sua mensagem ou dúvida para a equipe do Eco Sabor:</p>
+    <form onsubmit="enviarMensagem(event)">
+      <input type="text" placeholder="Seu Nome" required>
+      <input type="email" placeholder="Seu E-mail" required>
+      <textarea placeholder="Sua mensagem..." rows="4" required></textarea>
+      <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+    </form>
+  </div>
+</div>
+
+    <script>
+        const inputPlastico = document.getElementById('plastico');
+        const valPlastico = document.getElementById('val-plastico');
+        const resPlastico = document.getElementById('res-plastico');
+        const inputBanho = document.getElementById('banho');
+        const valBanho = document.getElementById('val-banho');
+        const resAgua = document.getElementById('res-agua');
+        const inputReciclagem = document.getElementById('reciclagem');
+        const valReciclagem = document.getElementById('val-reciclagem');
+        const resSustentabilidade = document.getElementById('res-sustentabilidade');
+
+        function calcularImpactoEcologico() {
+            const plasticoSemana = parseInt(inputPlastico.value);
+            const minBanho = parseInt(inputBanho.value);
+            const diasReciclagem = parseInt(inputReciclagem.value);
+
+ 
+            valPlastico.textContent = `${plasticoSemana} un`;
+            valBanho.textContent = `${minBanho} min`;
+            valReciclagem.textContent = `${diasReciclagem} dias`;
+
+  
+            const totalPlastico10Anos = plasticoSemana * 520;
+            
+            const litrosPorBanho = minBanho * 9;
+            const totalAgua10Anos = litrosPorBanho * 365 * 10;
+
+
+            let nivel = "Iniciante 🌱";
+            if (diasReciclagem >= 5 && plasticoSemana <= 5) {
+                nivel = "Guardião da Natureza 🌳";
+            } else if (diasReciclagem >= 3) {
+                nivel = "Consciente em Evolução 🌿";
+            }
+
+
+            resPlastico.textContent = totalPlastico10Anos.toLocaleString('pt-BR');
+            resAgua.textContent = totalAgua10Anos.toLocaleString('pt-BR') + " L";
+            resSustentabilidade.textContent = nivel;
+        }
+
+        inputPlastico.addEventListener('input', calcularImpactoEcologico);
+        inputBanho.addEventListener('input', calcularImpactoEcologico);
+        inputReciclagem.addEventListener('input', calcularImpactoEcologico);
+
+
+        calcularImpactoEcologico();
+    </script>
+</body>
+</html>

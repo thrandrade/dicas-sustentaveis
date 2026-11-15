@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DICAS SUSTENTAVEIS</title>
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <div id="titulo">
+            <h2 id="titulo"font-size: "1.5rem"         
+  font-weight: "800">
+            Dicas Sustentaveis 
+            
+
+            </h2>
+           
+        </div>
+    <nav id="menu">
+        <a href="index.html">INICIO</a>|
+        <a href="Receitas.html" class="menu">RECEITAS</a>|
+        <a href="Calculadora.html" class="menu">CALCULADORA </a>|
+        <a href="Reciclaveis.html" class="menu">DESCARTE</a>|
+        <a href="Ideias.html" class="menu"> IDEIAS RECICLAVEIS</a>
+        </nav>
+    </header>
+    <main>
+        <div id="proposta">
+            <h2>NOSSA PROPOSTA</h2>
+            <h3>
+                IREMOS TE ORIENTAR DA MELHOR FORMA PARA DEIXAR O MUNDO MAIS VERDE 
+            </h3>
+        
+             <div id="caixona">
+                <div id="Receitas" class="caixinhas">
+                    <img src="css/imagens/receita.png" width="50px">
+                    <h4>Receitas Sustentaveis: <br>
+                    Não descarte seu produto próximo ao vencimento, te ensinamos algumas receitinhas para não desperdiçar seu alimento!
+                    </h4>
+                </div>
+                <div id="descarte" class="caixinhas">
+                    <img src="css/imagens/bin.png" width="50px">
+                    <h4>Descarte: <br>
+                    Não sabe onde pode descartar seu lixo reciclavel? Aqui te passamos algumas opções de por onde começar!
+                    </h4>
+                </div>
+                <div id="idea"class="caixinhas">
+                    <img src="css/imagens/idea.png" width="50px" alt="">
+                    <h4>Ideias: <br>
+                    Aqui te ajudamos a fazer sua própria reciclagem com aquele produto que merece uma nova chance!
+                    </h4>
+                </div>
+                <div id="Calculadora" class="caixinhas">
+                    <img src="css/imagens/calculator.png" width="50px">
+                    <h4>Calculadora: <br>
+                    Como suas ações irão impactar o mundo daqui a 10 anos?
+                </h4>
+                </div>
+            </div>    
+            <h2>    FIQUE CONOSCO PARA SABER MAIS 
+            </h2>
+            
+        
+    </div>   
+    </main>
+
+
+</body>
+<footer class="rodape-simples">
+  <div class="rodape-conteudo">
+    
+    <div class="rodape-brand">
+      <span class="logo-texto">ECO SABOR</span>
+      <span class="copyright">&copy; <span id="ano-atual"></span> Todos os direitos reservados.</span>
+    </div>
+
+    <nav class="rodape-nav">
+      <a href="javascript:void(0)" onclick="abrirContato()" class="link-contato">Contato</a>
+    </nav>
+
+  </div>
+</footer>
+
+<div id="modal-contato" class="modal-overlay">
+    <script>
+    function abrirContato() {
+      document.getElementById("modal-contato").style.display = "flex";
+    }
+
+    function fecharContato() {
+      document.getElementById("modal-contato").style.display = "none";
+    }</script>
+  <div class="modal-box">
+    <button class="btn-fechar" onclick="fecharContato()">✕</button>
+    <h3>Fale Conosco</h3>
+    <p>Envie sua mensagem ou dúvida para a equipe do Eco Sabor:</p>
+    <form onsubmit="enviarMensagem(event)">
+      <input type="text" placeholder="Seu Nome" required>
+      <input type="email" placeholder="Seu E-mail" required>
+      <textarea placeholder="Sua mensagem..." rows="4" required></textarea>
+      <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+    </form>
+  </div>
+</div>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DICAS SUSTENTAVEIS</title>
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <div id="titulo">
+            <h2 id="titulo"font-size: "1.5rem"         
+  font-weight: "800">
+            Dicas Sustentaveis 
+            
+
+            </h2>
+           
+        </div>
+        <nav id="menu">
+        <a href="index.html">INICIO</a>|
+        <a href="Receitas.html" class="menu">RECEITAS</a>|
+        <a href="Calculadora.html" class="menu">CALCULADORA </a>|
+        <a href="Reciclaveis.html" class="menu">DESCARTE</a>|
+        <a href="Ideias.html" class="menu"> IDEIAS RECICLAVEIS</a>
+        </nav>
+    </header>
+        <main class="container-principal">
+    
+    <section class="hero-secao">
+      <h2>Assista ao vídeo guia para aprender a separar cada material.</h2>
+    </section>
+
+    <section class="video-secao">
+      <div class="video-container">
+        <video controls>
+          <source src="css/video/video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+  </main> 
+
+
+
+
+    <footer class="rodape-simples">
+  <div class="rodape-conteudo">
+    
+    <div class="rodape-brand">
+      <span class="logo-texto">ECO SABOR</span>
+      <span class="copyright">&copy; <span id="ano-atual"></span> Todos os direitos reservados.</span>
+    </div>
+
+    <nav class="rodape-nav">
+      <a href="javascript:void(0)" onclick="abrirContato()" class="link-contato">Contato</a>
+    </nav>
+
+  </div>
+</footer>
+
+<div id="modal-contato" class="modal-overlay">
+    <script>
+    function abrirContato() {
+      document.getElementById("modal-contato").style.display = "flex";
+    }
+
+    function fecharContato() {
+      document.getElementById("modal-contato").style.display = "none";
+    }</script>
+  <div class="modal-box">
+    <button class="btn-fechar" onclick="fecharContato()">✕</button>
+    <h3>Fale Conosco</h3>
+    <p>Envie sua mensagem ou dúvida para a equipe do Eco Sabor:</p>
+    <form onsubmit="enviarMensagem(event)">
+      <input type="text" placeholder="Seu Nome" required>
+      <input type="email" placeholder="Seu E-mail" required>
+      <textarea placeholder="Sua mensagem..." rows="4" required></textarea>
+      <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+    </form>
+  </div>
+</div>
+<style>
+  .video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Deixa o vídeo grande, mas sem ocupar a tela inteira */
+  margin: 30px auto; /* Dá um respiro em cima/baixo e centraliza na horizontal */
+}
+
+/* Estilização e proporção do elemento de vídeo em si */
+.video-container video, 
+.video-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Mantém a proporção correta de vídeo profissional */
+  border-radius: 12px; /* Deixa as bordas levemente arredondadas, combinando com o design */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra elegante de destaque */
+}
+</style>
+</body>
+</html>

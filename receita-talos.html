@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DICAS SUSTENTAVEIS</title>
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <div id="titulo">
+            <h2 id="titulo"font-size: "1.5rem"         
+  font-weight: "800">
+            Dicas Sustentaveis 
+            
+
+            </h2>
+           
+        </div>
+        <nav id="menu">
+        <a href="index.html">INICIO</a>|
+        <a href="Receitas.html" class="menu">RECEITAS</a>|
+        <a href="Calculadora.html" class="menu">CALCULADORA </a>|
+        <a href="Reciclaveis.html" class="menu">DESCARTE</a>|
+        <a href="Ideias.html" class="menu"> IDEIAS RECICLAVEIS</a>
+        </nav>
+    </header>
+<main>
+
+
+<div class="conteudo-receita">
+    <h2 class="titulo-receita">Refogado de Talos de Legumes</h2>
+    <p class="descricao-receita">Talos de brócolis, couve-flor, beterraba e cenoura são altamente nutritivos e perfeitos para um acompanhamento saboroso.</p>
+
+    <div class="bloco-receita">
+        <h3>Ingredientes</h3>
+        <ul>
+            <li>2 xícaras de talos variados higienizados e picados (brócolis, couve-flor, salsinha, etc.)</li>
+            <li>1 cebola pequena picada</li>
+            <li>2 dentes de alho picados</li>
+            <li>2 colheres de sopa de azeite de oliva</li>
+            <li>Sal e pimenta-do-reino a gosto</li>
+            <li>Cheiro-verde picado a gosto</li>
+            <li>1/2 xícara de água (se necessário para ajudar a amaciar)</li>
+        </ul>
+
+        <h3>Modo de Preparo</h3>
+        <ol>
+            <li><strong>Higienize e pique:</strong> Lave bem todos os talos em água corrente e pique-os em pedaços bem miúdos e uniformes para cozinharem por igual.</li>
+            <li><strong>Refogue os temperos:</strong> Em uma frigideira ou panela, aqueça o azeite e doure a cebola e o alho em fogo médio.</li>
+            <li><strong>Adicione os talos:</strong> Acrescente os talos picados à panela e refogue por cerca de 3 a 5 minutos, mexendo sempre.</li>
+            <li><strong>Cozinhe até amaciar:</strong> Se perceber que estão muito firmes, adicione a água aos poucos, tampe a panela e deixe cozinhar em fogo baixo por mais 5 minutos.</li>
+            <li><strong>Finalize:</strong> Tempere com sal e pimenta-do-reino a gosto. Salpique o cheiro-verde fresco por cima e sirva quente.</li>
+        </ol>
+
+
+    </div>
+</div>
+<div class="container-leitor">
+    <button id="btnOuvir" onclick="lerPagina()">
+        <span id="iconeAudio">🔊</span> 
+    </button> </div>
+</main>
+
+
+    
+</body>
+<footer class="rodape-simples">
+  <div class="rodape-conteudo">
+        <div class="rodape-brand">
+            <span class="logo-texto">ECO SABOR</span>
+            <span class="copyright">&copy; <span id="ano-atual"></span> Todos os direitos reservados.</span>
+        </div>
+    <nav class="rodape-nav">
+      <a href="javascript:void(0)" onclick="abrirContato()" class="link-contato">Contato</a>
+    </nav>
+  </div>
+</footer>
+
+<div id="modal-contato" class="modal-overlay">
+    <script>
+        function abrirContato() {
+            document.getElementById("modal-contato").style.display = "flex";
+        }
+        function fecharContato() {
+            document.getElementById("modal-contato").style.display = "none";}
+        function lerPagina() {
+    // Verifica se o navegador suporta a API de fala
+    if (!('speechSynthesis' in window)) {
+        alert("Seu navegador não suporta recursos de áudio/fala.");
+        return;
+    }
+
+    const sintetizador = window.speechSynthesis;
+
+    if (sintetizador.speaking) {
+        sintetizador.cancel();
+        atualizarBotao(false);
+        return;
+    }
+
+    const elementosTexto = document.querySelectorAll('.titulo-receita, .descricao-receita, .bloco-receita h3, .bloco-receita li, .dica-sustentavel, .titulo-secao, .subtitulo-secao, .card-ideia');
+    
+    let textoCompleto = "";
+    elementosTexto.forEach(el => {
+        textoCompleto += el.innerText + ". ";
+    });
+
+    if (textoCompleto.trim() === "") {
+        alert("Nenhum texto encontrado para ler.");
+        return;
+    }
+
+    
+    const mensagem = new SpeechSynthesisUtterance(textoCompleto);
+    mensagem.lang = 'pt-BR'; 
+    mensagem.rate = 1.0;     
+    mensagem.pitch = 1.0;    
+
+   
+    mensagem.onstart = function() {
+        atualizarBotao(true);
+    };
+
+    mensagem.onend = function() {
+        atualizarBotao(false);
+    };
+
+    mensagem.onerror = function() {
+        atualizarBotao(false);
+    };
+
+    // Executa a leitura
+    sintetizador.speak(mensagem);
+}
+
+function atualizandoBotao(falando) {
+    
+}
+
+function atualizarBotao(falando) {
+    const icone = document.getElementById('iconeAudio');
+    const texto = document.getElementById('textoBotao');
+    
+    if (falando) {
+        icone.innerText = "⏹️";
+        texto.innerText = "Parar leitura";
+    } else {
+        icone.innerText = "🔊";
+        texto.innerText = "Ouvir página";
+    }
+}
+    </script>
+    <div class="modal-box">
+        <button class="btn-fechar" onclick="fecharContato()">✕</button>
+        <h3>Fale Conosco</h3>
+        <p>Envie sua mensagem ou dúvida para a equipe do Eco Sabor:</p>
+        <form onsubmit="enviarMensagem(event)">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <textarea placeholder="Sua mensagem..." rows="4" required></textarea>
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+    </div>
+</div>
+</html>
