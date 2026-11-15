@@ -7,6 +7,9 @@ body,main{
    color: #022709;
    text-transform: uppercase;
    padding: 0%;
+   background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
     :root {
@@ -356,7 +359,7 @@ label {
       display: block;
       font-weight: 600;
       margin-bottom: 8px;
-      color: color: #0c2517;
+      color: #0c2517;
      font-size: 0.95rem;}
 .range-container {
       display: flex;
@@ -388,6 +391,9 @@ input[type="range"] {
     }
 
     .bloco-receita {
+      height: auto;
+    min-height: auto;
+    overflow-y: visible;
         background: rgba(255, 255, 255, 0.95);
         border-radius: 12px;
         padding: 35px;
