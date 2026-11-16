@@ -1,18 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
 @import url('https://googleapis.com');
-body,main{
-      background-color: white;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   color: #022709;
-   text-transform: uppercase;
-   padding: 0%;
-   background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
 
-    :root {
+:root {
     --primary-green: #2d5a27;
     --light-green: #eaf4e9;
     --accent-green: #4f772d;
@@ -22,263 +12,281 @@ body,main{
     --white: #ffffff;
 }
 
-header nav a {
-  color: #0c2517;
-  transition: color 0.2s ease;
-  padding: 8px 16px;
-  border-radius: 8px;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-a:hover {
-  color: #3f5a48;
+img, video {
+    max-width: 100%;
+    height: auto;
 }
-header{
 
-    padding: 10px;
-  
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    
-
-    
+body {
+    overflow-x: hidden;
+    background-color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #022709;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
 }
-a{
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
-    text-decoration-line: none;
-    text-align: right;
-    font-weight: bold;
-    font-size: 16px;
-}
-#titulo{
-      display: block;
 
-    font-weight: bold;
-    unicode-bidi: isolate;
-font-family: 'Caveat Brush', cursive;
-  font-weight: 700;
-  font-size: 2.5rem;
-
-  letter-spacing: -0.02em; 
-text-transform: uppercase;  
-  letter-spacing: 2px;       
-  color: #0c2517;          
-
-}
-main{
+main {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 100%;
     margin: 0;
+    background-image: url("imagens/142828.jpg");
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-#caixona{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    gap: 15px;
+    width: 100%;
+}
 
-    
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
 }
-h4{
-    color: #122614;
+
+a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #022709;
+    text-decoration: none;
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.2s ease;
 }
-.caixinhas{
-    
+
+a:hover {
+    color: #3f5a48;
+}
+
+#titulo {
+    display: block;
+    font-family: 'Caveat Brush', cursive;
+    font-weight: 700;
+    font-size: clamp(1.3rem, 4vw, 2.5rem);
+    letter-spacing: 1px;
+    color: #0c2517;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
+}
+
+#caixona {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
     padding: 10px;
+}
+
+.caixinhas {
+    flex: 1 1 200px;
+    max-width: 250px;
+    min-height: 250px;
+    padding: 15px;
     background-color: white;
     text-align: center;
-    margin: 50px;
-    width: 200px;
-    height: 200px;
+    margin: 0;
     border-radius: 10px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-size: small;
- box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 4px solid #182c07;
-;; 
-  
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #182c07;
 }
-
 
 .caixinhas:hover {
-  transform: translateY(-8px); /* Eleva o cartão levemente */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);}
-  
-main{
- background-image: url("imagens/142828.jpg");
- backdrop-filter: blur(5px);
-border-radius: 20px;
-
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
+
+h4 {
+    color: #122614;
+}
+
+p, h1, h2, h3, h4 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
 .rodape-simples {
- 
-
-   color: #0c2517;
-  padding: 20px;
-
-
+    color: #0c2517;
+    padding: 20px;
 }
 
 .rodape-conteudo {
-
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .rodape-brand {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .logo-texto {
-  font-weight: 700;
-  letter-spacing: 1.5px;
-   color: #0c2517;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #0c2517;
     font-size: 20px;
 }
 
 .copyright {
-  font-size: 0.85rem;
-   color: #0c2517;
+    font-size: 0.85rem;
+    color: #0c2517;
 }
 
-
 .link-contato {
-   color: #0c2517;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  padding: 6px 16px;
-  border: 1px solid #0c2517;;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+    color: #0c2517;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 6px 16px;
+    border: 1px solid #0c2517;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .link-contato:hover {
-  background-color: #2f4632;
-  color: #122614;
-  border-color: #013301;
+    background-color: #2f4632;
+    color: #122614;
+    border-color: #013301;
 }
 
-
 .modal-overlay {
-  display: none; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  z-index: 2000;
-  justify-content: center;
-  align-items: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-box {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 420px;
-  position: relative;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
 .modal-box h3 {
-  color: #1a3d2f;
-  margin-bottom: 6px;
+    color: #1a3d2f;
+    margin-bottom: 6px;
 }
 
 .modal-box p {
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 18px;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
 }
 
 .modal-box input, .modal-box textarea {
-  width: 100%;
-  padding: 10px 14px;
-  margin-bottom: 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 0.9rem;
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
 }
 
 .btn-enviar {
-  width: 100%;
-  background-color: #1a3d2f;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s;
+    width: 100%;
+    background-color: #1a3d2f;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
 .btn-enviar:hover {
-  background-color: #032e05;
+    background-color: #032e05;
 }
 
 .btn-fechar {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  border: none;
-  background: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #888;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #888;
 }
-        .value-display {
-            font-weight: bold;
-            color: #0c2517;
-            min-width: 60px;
-            text-align: right;
-        }
 
-        .results {
-            margin-top: 35px;
-            padding: 25px;
-            background: var(--light-green);
-            border-radius: 10px;
-            border-left: 5px solid #0c2517;
-            color: #0c2517;
-        }
+.value-display {
+    font-weight: bold;
+    color: #0c2517;
+    min-width: 60px;
+    text-align: right;
+}
 
-        .results h3 {
-            margin-top: 0;
-            color: #0c2517;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
+.results {
+    margin-top: 35px;
+    padding: 25px;
+    background: var(--light-green);
+    border-radius: 10px;
+    border-left: 5px solid #0c2517;
+    color: #0c2517;
+}
 
-        .result-item {
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            color: var(--text-dark);
-        }
+.results h3 {
+    margin-top: 0;
+    color: #0c2517;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
 
-        .result-item:last-child {
-            margin-bottom: 0;
-        }
+.result-item {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
 
-        .highlight {
-            font-weight: bold;
-            color: var(--primary-green);
-        }
+.result-item:last-child {
+    margin-bottom: 0;
+}
+
+.highlight {
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
 #receitas-main {
     flex: 1;
     display: flex;
@@ -287,6 +295,7 @@ border-radius: 20px;
     justify-content: center;
     padding: 160px 20px;
 }
+
 .filter-card {
     background: var(--white);
     padding: 40px;
@@ -309,17 +318,17 @@ select {
     font-size: 1rem;
     font-family: inherit;
     color: var(--text-dark);
-    background-color: #dce5dc ;
+    background-color: #dce5dc;
     border: 2px solid #b3bcb3;
     border-radius: 8px;
-    appearance: none; 
+    appearance: none;
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease;
 }
 
 select:hover {
-    border-color:#0c2517;
+    border-color: #0c2517;
 }
 
 .select-container::after {
@@ -332,101 +341,100 @@ select:hover {
     transform: translateY(-50%);
     pointer-events: none;
 }
-#main-calculadora
-{     flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;}
+
+#main-calculadora {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
 .calculator-card {
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-      width: 100%;
-      max-width: 600px;
-      border-top: 5px solid #0c2517;
-        }
-
-
-
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 600px;
+    border-top: 5px solid #0c2517;
+}
 
 .input-group {
-      margin-bottom: 22px;
-        }
+    margin-bottom: 22px;
+}
 
 label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #0c2517;
-     font-size: 0.95rem;}
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0c2517;
+    font-size: 0.95rem;
+}
+
 .range-container {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-        }
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
 input[type="range"] {
-            flex: 1;
-            accent-color:#0c2517;
-            cursor: pointer;
-        }
+    flex: 1;
+    accent-color: #0c2517;
+    cursor: pointer;
+}
 
-        .conteudo-receita {
-        max-width: 850px;
-        margin: 40px auto;
-        padding: 0 20px;
-        font-family: 'Inter', sans-serif;
-        color: #2d3748;
-    }
+.conteudo-receita {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+    color: #2d3748;
+}
 
+.descricao-receita {
+    text-align: center;
+    color: #4a5568;
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+}
 
-
-    .descricao-receita {
-        text-align: center;
-        color: #4a5568;
-        font-size: 1.1rem;
-        margin-bottom: 35px;
-    }
-
-    .bloco-receita {
-      height: auto;
+.bloco-receita {
+    height: auto;
     min-height: auto;
     overflow-y: visible;
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 12px;
-        padding: 35px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        border-top: 5px solid #182c07;
-    }
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #182c07;
+}
 
-    .bloco-receita h3 {
-        font-family: 'Fredoka', sans-serif;
-        color: #0c2517;
-        font-size: 1.5rem;
-        margin-top: 25px;
-        margin-bottom: 15px;
-        border-bottom: 2px solid #e2e8f0;
-        padding-bottom: 8px;
-    }
+.bloco-receita h3 {
+    font-family: 'Fredoka', sans-serif;
+    color: #0c2517;
+    font-size: 1.5rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
 
-    .bloco-receita h3:first-of-type {
-        margin-top: 0;
-    }
+.bloco-receita h3:first-of-type {
+    margin-top: 0;
+}
 
-    /* Listas de ingredientes e passo a passo */
-    .bloco-receita ul, 
-    .bloco-receita ol {
-        padding-left: 20px;
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #182c07;
-    }
+.bloco-receita ul, 
+.bloco-receita ol {
+    padding-left: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #182c07;
+}
 
-    .bloco-receita li {
-        margin-bottom: 10px;
-    }
+.bloco-receita li {
+    margin-bottom: 10px;
+}
 
 .container-leitor {
     display: flex;
@@ -457,3 +465,79 @@ input[type="range"] {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
+    .conteudo-ideias {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+        font-family: 'Inter', sans-serif;
+    }
+
+
+
+    .subtitulo-secao {
+        text-align: center;
+        color: #4a5568;
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+    }
+
+    /* Grid de cards inspirado no estilo do seu menu */
+    .grid-ideias-práticas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .card-ideia {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        padding: 30px 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        border-top: 4px solid #0c2517;
+    }
+
+    .card-ideia:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-ideia h3 {
+        font-family: 'Fredoka', sans-serif;
+        color: #0c2517;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .card-ideia p {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .card-ideia ul {
+        text-align: left;
+        list-style-type: none;
+        padding-left: 0;
+        font-size: 0.9rem;
+        color: #333;
+    }
+
+    .card-ideia li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 8px;
+    }
+
+    .card-ideia li::before {
+        content: "•";
+        color: #137333;
+        font-weight: bold;
+        font-size: 1.2rem;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
